@@ -74,16 +74,10 @@ TEST(string_calculator_add_when_delimited_with_newline_and_comma,returns_the_sum
 }
 
 TEST(string_calculator_add_when_passed_negative_numbers,throws_an_exception_listing_invalid_values){
- //Arrange
   StringCalculator calculator;
- 
   string input="1,-2,-4,5";
-  //int expectedsum=-2;
-  //Act
-  int actualSum=calculator.Add(input);
-  //Assert
-  ASSERT_THROW(actualSum, invalid_argument);
-}
+  ASSERT_THROW(calculator.Add(input),invalid_argument); 
+ }
 
 TEST(string_calculator_when_add_when_passed_numbers_over_1000,ignores_them){
  //Arrange
