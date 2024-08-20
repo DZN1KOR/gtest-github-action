@@ -91,12 +91,12 @@ TEST(string_calculator_add_when_passed_negative_numbers,throws_an_exception_list
  //Arrange
   StringCalculator calculator;
  
-  string input="1,-2,-4,5"";
+  string input="1,-2,-4,5";
   int expectedsum=3;
   //Act
   int actualSum=calculator.Add(input);
   //Assert
-  ASSERT_EQ(actualSum,expectedsum);
+  ASSERT_THROW(actualSum,"Negatives not allowed: -2,-4");
 }
 
 
