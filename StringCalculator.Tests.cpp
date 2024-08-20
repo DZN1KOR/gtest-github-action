@@ -122,6 +122,28 @@ TEST(string_calculator_when_passed_multicharacter_delimiter,uses_that_delimiter_
   //Assert
   ASSERT_EQ(actualSum,expectedsum);
 }
+TEST(string_calculator_when_passed_multiple_delimiters,sums_on_each_delimiter){
+ //Arrange
+  StringCalculator calculator;
+ 
+  string input="//[*][%]\n4*2%3";
+  int expectedsum=9;
+  //Act
+  int actualSum=calculator.Add(input);
+  //Assert
+  ASSERT_EQ(actualSum,expectedsum);
+}
+TEST(string_calculator_when_passed_multiple_multicharacter_delimiters,sums_on_each_delimiter){
+ //Arrange
+  StringCalculator calculator;
+ 
+  string input="//[**][%^]\n4**1%^9";
+  int expectedsum=14;
+  //Act
+  int actualSum=calculator.Add(input);
+  //Assert
+  ASSERT_EQ(actualSum,expectedsum);
+}
 
 
 
