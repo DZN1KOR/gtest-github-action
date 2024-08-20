@@ -94,9 +94,9 @@ TEST(string_calculator_add_when_passed_negative_numbers,throws_an_exception_list
   string input="1,-2,-4,5";
   int expectedsum=3;
   //Act
-  int actualSum=calculator.Add(input);
+  //int actualSum=calculator.Add(input);
   //Assert
-  ASSERT_THROW(calculator.Add(input), "invalid_argument");
+  ASSERT_THROW(invalid_argument, calculator.Add("1,-2,-4,5"));
 }
 
 
