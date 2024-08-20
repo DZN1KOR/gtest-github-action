@@ -96,7 +96,7 @@ TEST(string_calculator_add_when_passed_negative_numbers,throws_an_exception_list
   //Act
   int actualSum=calculator.Add(input);
   //Assert
-  ASSERT_THROW(actualSum,"Negatives not allowed: -2,-4");
+  ASSERT_THROW(Negatives not allowed, "-2,-4");
 }
 
 
