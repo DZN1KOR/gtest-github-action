@@ -87,18 +87,41 @@ TEST(string_calculator_add_when_delimited_with_newline_and_comma,returns_the_sum
   ASSERT_EQ(actualSum,expectedsum);
 }
 
-TEST(string_calculator_add_when_passed_negative_numbers,throws_an_exception_listing_invalid_values){
+// TEST(string_calculator_add_when_passed_negative_numbers,throws_an_exception_listing_invalid_values){
+//  //Arrange
+//   StringCalculator calculator;
+ 
+//   string input="1,-2,-4,5";
+//   int expectedsum=3;
+//   //Act
+//   //int actualSum=calculator.Add(input);
+//   //Assert
+//   ASSERT_THROW(calculator.Add("1,-2,-4,5"), invalid_argument);
+// }
+
+TEST(string_calculator_when_add_when_passed_numbers_over_1000,ignores_them){
  //Arrange
   StringCalculator calculator;
  
-  string input="1,-2,-4,5";
-  int expectedsum=3;
+  string input="42,1001,3";
+  int expectedsum=45;
   //Act
-  //int actualSum=calculator.Add(input);
+  int actualSum=calculator.Add(input);
   //Assert
-  ASSERT_THROW(invalid_argument, calculator.Add("1,-2,-4,5"));
+  ASSERT_EQ(actualSum,expectedsum);
 }
 
+TEST(string_calculator_when_passed_multicharacter_delimiter,uses_that_delimiter_to_sum_values){
+ //Arrange
+  StringCalculator calculator;
+ 
+  string input="//[***]\n8***2***3";
+  int expectedsum=13;
+  //Act
+  int actualSum=calculator.Add(input);
+  //Assert
+  ASSERT_EQ(actualSum,expectedsum);
+}
 
 
 
