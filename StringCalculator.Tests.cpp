@@ -12,20 +12,6 @@ TEST(string_calculator_add_when_passed_a_single_number,returns_0_for_empty_strin
   ASSERT_EQ(actualSum,expectedsum);
 }
 
-// TEST(string_calculator_add_when_passed_a_single_number,returns_0_for_empty_zeo){
-//  //Arrange
-//   StringCalculator calculator;
-//  int i=0;
-//  for(i=0; i<1000; i++)
-//   {
-//   string input="i";
-//   int expectedsum=i;
-//   //Act
-//   int actualSum=calculator.Add(input);
-//   //Assert
-//   ASSERT_EQ(actualSum,expectedsum);
-// }
-// }
 
 TEST(string_calculator_add_when_passed_a_single_number,returns_0_for_empty_Zero){
  //Arrange
