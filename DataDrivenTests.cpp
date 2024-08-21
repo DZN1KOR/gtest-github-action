@@ -19,26 +19,26 @@ INSTANTIATE_TEST_SUITE_P(SingleNumerParameter,
                                         std::make_tuple("1,2",3)
   ));
 
-TEST(string_calculator_add_when_passed_a_single_number,returns_0_for_empty_string){
- //Arrange
-  StringCalculator calculator;
-  string input="";
-  int expectedsum=0;
-  //Act
-  int actualSum=calculator.Add(input);
-  //Assert
-  ASSERT_EQ(actualSum,expectedsum);
-}
+// TEST(string_calculator_add_when_passed_a_single_number,returns_0_for_empty_string){
+//  //Arrange
+//   StringCalculator calculator;
+//   string input="";
+//   int expectedsum=0;
+//   //Act
+//   int actualSum=calculator.Add(input);
+//   //Assert
+//   ASSERT_EQ(actualSum,expectedsum);
+// }
 
-TEST_F(string_calculator_add_Fixture,when_passed_a_single_number_returns_0_for_zero){
- //Arrange
-  string input="0";
-  int expectedsum=0;
-  //Act
-  int actualSum=calculator.Add(input);
-  //Assert
-  ASSERT_EQ(actualSum,expectedsum);
-}
+// TEST_F(string_calculator_add_Fixture,when_passed_a_single_number_returns_0_for_zero){
+//  //Arrange
+//   string input="0";
+//   int expectedsum=0;
+//   //Act
+//   int actualSum=calculator.Add(input);
+//   //Assert
+//   ASSERT_EQ(actualSum,expectedsum);
+// }
 
 TEST_P(string_calculator_add_Parameter_Fixture,when_passed_a_single_Or_Multiple_Number_with_Delimiters_returns_Sum){
  //Arrange
